@@ -1,0 +1,3 @@
+题目 ：
+爬取此页将一百条数据 ：https://www.amazon.com/Best-Sellers-Kitchen-Dining-Bakeware/zgbs/kitchen/289668
+将商品关键信息抓取出来并保存csv文件

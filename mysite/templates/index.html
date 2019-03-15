@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index页面</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+            <th>Asin</th>
+            <th>Total_reviews</th>
+            <th>Total_score</th>
+        </tr>
+      </thead>
+        <tbody>
+        {% for v in data %}
+            <tr>
+            <td><a href="/detail/?Asin={{ v.Asin }}">{{ v.Asin }}</a></td>
+            <td>{{ v.Total_reviews }}</td>
+            <td>{{ v.Total_score }}</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+</table>
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+        {{ page_html|safe }}
+  </ul>
+</nav>
+</div>
+
+<script src="/static/jquery-1.12.3.js"></script>
+
+</body>
+</html>

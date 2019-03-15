@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail页面</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+            <th>Asin</th>
+            <th>Total_reviews</th>
+            <th>Total_score</th>
+            <th>Asin_tag</th>
+            <th>Reviewer</th>
+            <th>Stars</th>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Review content</th>
+        </tr>
+      </thead>
+        <tbody>
+        {% for v in detail_data %}
+            <tr>
+            <td>{{ v.Asin_detail }}</td>
+            <td>{{ v.Total_reviews_detail }}</td>
+            <td>{{ v.Total_score_detail }}</td>
+            <td>{{ v.Asin_tag }}</td>
+            <td>{{ v.Reviewer }}</td>
+            <td>{{ v.Stars }}</td>
+            <td>{{ v.Title }}</td>
+            <td>{{ v.Date_str }}</td>
+            <td>{{ v.Review_content }}</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+</table>
+</div>
+<script src="/static/jquery-1.12.3.js"></script>
+
+</body>
+</html>
